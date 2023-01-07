@@ -20,7 +20,7 @@
 	<div class="row">
 		<div class="card border-0 p-0">
 			<?php
-				$result=\P\Links\lists();
+				$result=\P\Brands\lists();
 				while($row = $result->fetch_assoc()) { ?>
 
 				<div class="card-body card-hover border-bottom p-2 text-decoration-none text-body" >
