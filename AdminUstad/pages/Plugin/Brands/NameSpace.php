@@ -19,7 +19,7 @@ function config($virable){
 
 
 
-function lists($Get){
+function lists($Get=null){
     global $con; 
     $sql = "SELECT * FROM `sh_pl_brand_names` "; //
     $result = $con->query($sql);
