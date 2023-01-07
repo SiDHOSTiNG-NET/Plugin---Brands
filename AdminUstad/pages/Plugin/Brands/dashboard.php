@@ -35,8 +35,9 @@ if(isset($_GET["DeleteBarndNameID"])){
 					<div class="" style="float:left;">
 						<?php echo $row["Name"]; ?>
 					</div>
-					<div class="px-2" style="float:right;">
-						<a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/dashboard?DeleteBarndNameID=<?php echo $row["Id"]; ?>"><i class="fad fa-trash-alt"></i></a>
+					<div class="" style="float:right;">
+						<a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/Pages?EditBarndNameID=<?php echo $row["Id"]; ?>" class="ps-2 pe-1"><i class="fad fa-edit"></i></a>
+						<a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/dashboard?DeleteBarndNameID=<?php echo $row["Id"]; ?>" class="ps-1 pe-2"><i class="fad fa-trash-alt"></i></a>
 					</div>
 				</div>
 			<?php } ?>			
