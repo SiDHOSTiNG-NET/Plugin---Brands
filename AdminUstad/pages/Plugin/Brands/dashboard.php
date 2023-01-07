@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php 
+if(isset($_GET["DeleteBarndNameID"])){
+	$DeleteBarndNameID=$_GET["DeleteBarndNameID"];
+	$sql = "DELETE FROM `sh_pl_brand_names` WHERE `Id`='$DeleteBarndNameID'";
+	if ($con->query($sql) === TRUE) {
+		header("Location: /".$AdminFolder."/Plugin/".$Plugin."/dashboard");
+	}
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<?php include("pages/inc/Header.php"); ?>
@@ -24,13 +32,13 @@
 				while($row = $result->fetch_assoc()) { ?>
 
 				<div class="card-body card-hover border-bottom p-2 text-decoration-none text-body" >
-					<div class="" style="border:1px solid red;">
+					<div class="" style="float:left;">
 						<?php echo $row["Name"]; ?>
 					</div>
-					<div style="float:right; border:1px solid red;">
-						DEL
+					<div class="px-2" style="float:right;">
+						<a href="<?php echo $AdminFolder; ?>/Plugin/<?php echo $Plugin; ?>/dashboard?DeleteBarndNameID=<?php echo $row["Id"]; ?>"><i class="fad fa-trash-alt"></i></a>
 					</div>
-			</div>
+				</div>
 			<?php } ?>			
 		</div>
 	</div>
