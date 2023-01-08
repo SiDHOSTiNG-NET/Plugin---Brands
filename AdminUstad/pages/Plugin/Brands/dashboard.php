@@ -33,7 +33,7 @@ if(isset($_GET["DeleteBarndNameID"])){
 					$ValueBrandName=$row["Name"];
 					?>
 					
-				<div class="card-body card-hover border-bottom p-2 text-decoration-none text-body" >
+				<div class="card-body card-hover border-bottom p-2 text-decoration-none text-body" style="<?php if($row["Status"]=="Disable"){ echo" background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(255,102,102,1)); background-size: 50px auto; background-repeat: no-repeat;"; } ?>" >
 					<div class="" style="float:left;">
 						<?php echo $row["Name"]; ?>
 					</div>
